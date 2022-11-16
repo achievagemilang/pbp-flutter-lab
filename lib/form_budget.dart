@@ -195,6 +195,40 @@ class _FormBudgetPageState extends State<FormBudgetPage> {
                       ),
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
+                          if (jenis == null) {
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                return Dialog(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  elevation: 15,
+                                  child: Container(
+                                    child: ListView(
+                                      padding: const EdgeInsets.only(
+                                          top: 20, bottom: 20),
+                                      shrinkWrap: true,
+                                      children: <Widget>[
+                                        Center(
+                                          child: const Text(
+                                              'Jenis tidak boleh kosong'),
+                                        ),
+                                        SizedBox(height: 20),
+                                        TextButton(
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          },
+                                          child: Text('Kembali'),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                            );
+                            return;
+                          }
                           showDialog(
                             context: context,
                             builder: (context) {
