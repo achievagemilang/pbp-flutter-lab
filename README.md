@@ -1,6 +1,7 @@
 # Pendahuluan
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
+<br><br>
 
 Nama: Achieva Futura Gemilang
 
@@ -9,8 +10,11 @@ NPM: 2106750452
 Kelas: PBP D
 
 Kode Asdos: WM
+<br><br>
 
 Repositori ini digunakan sebagai wadah untuk mengumpulkan tugas Proyek Flutter PBP.
+<br>
+<br>
 
 # Tugas 7: Elemen Dasar Flutter
 
@@ -31,7 +35,6 @@ Di lain sisi, stateful widget adalah sebuah widget yang bersifat stateful, artin
 6. Column: mengatur children widgets untuk tersusun dalam satu kolom.
 7. Row: mengatur children widgets untuk tersusun dalam satu baris.
 8. Icon: memberikan icon pada button.
-<br>
 
 ### Apa fungsi dari setState()? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
 setState() adalah cara kita untuk memberitahu Flutter bahwa internal state dari widget kita telah berubah. Karena kemungkinan dapat mempengaruhi tamplian, setstate() nantinya akan berfungsi untuk me-rebuild widget tree sehingga widget yang dihasilkan memiliki state terbaru. Pada tugas 7, variabel yang terdampak fungsi setState() adalah _counter yang menyimpan jumlah penekanan tombol plus/minus (akumulatif).
@@ -75,7 +78,7 @@ Selain menggunakan beberapa widget yang telah disebutkan pada widget-widget untu
 10. DropdownHideUnderline: menghapus underline dari dropdown button.
 11. TextButton: Agar user dapat mensubmit form dan menyimpan data budget.
 12. Align: berfungsi untuk memberikan alignment untuk suatu widget.
-<br>
+
 
 ### Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
 1. onPressed
@@ -86,7 +89,7 @@ Selain menggunakan beberapa widget yang telah disebutkan pada widget-widget untu
 6. onChanged
 7. onHover
 8. dan lain-lain
-<br>
+
 
 ### Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
 Navigator sebenarnya berjalan dengan menggunakan prinsip stack untuk menyimpan page-page aplikasi yang dikunjungi. Page yang sedang dikunjungi biasanya berada pada top of stack. Apabila kita ingin mennganti halaman/page, maka page yang akan dikunjungi akan di-push pada top of stack. Di lain sisi, jika kita ingin berpindah ke halaman/page sebelumnya maka akan dilakukan operasi pop pada top of stack sehingga page yang saat ini dikunjungi akan dihapus dari top of stack. Karena penghapusan tersebut, top of stack akan berada pada page yang memuat halaman sebelumnya.
