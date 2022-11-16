@@ -1,4 +1,4 @@
-# Tugas 7: Elemen Dasar Flutter
+# Pendahuluan
 
 Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
 
@@ -10,11 +10,9 @@ Kelas: PBP D
 
 Kode Asdos: WM
 
-## Pendahuluan
-
 Repositori ini digunakan sebagai wadah untuk mengumpulkan tugas Proyek Flutter PBP.
 
-## Pertanyaan dan Jawaban (counter_7)
+# Tugas 7: Elemen Dasar Flutter
 
 ### Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya.
 Perbedaan dan penjelasan dari keduanya dapat dilihat dari namanya. Stateless widget adalah Sebuah widget yang bersifat stateless, artinya ia tidak memiliki sebuah state. Hal ini berarti widget ini bersifat statis karena tidak akan ada yang state yang berubah dari widget tersebut.
@@ -52,4 +50,55 @@ Meskipun Keduanya merupakan sebuah variabel yang konstan. Perbedaanya terletak p
 - Menggunakan widget seperti `Padding` dan `Row` agar kedua tombol dapat memiliki jarak yang bersesuaian. 
 - Menambahkan logic untuk menyembunyikan tombol minus saat counter bernilai 0.
 - Selesai! jangan lupa untuk add, commit, dan push ke repository github.
+<br>
+<br>
+
+
+# Tugas 8: Elemen Dasar Flutter
+
+### Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
+`Navigator.push` adalah cara kita untuk menambahkan page yang akan dituju di top of stack navigator. Di lain sisi, `Navigator.pushReplacement` akan menghapus top of stack saat ini (page tempat kita berada), lalu menambahkan page yang dituju di top of stack navigator.
+<br>
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+Selain menggunakan beberapa widget yang telah disebutkan pada widget-widget untuk penyelesaian tugas 7, beberapa istilah widget lain yang saya gunakan dan belum pernah dijelaskan adalah sebagai berikut:  
+
+1. ListView: Sebagai tempat menampung Card yang berisikan widget ListTile untuk yang memuat data budget yang telah ditambahkan.
+2. ListTile: Berfungsi sebagai wadah untuk mengisi ListView. Jumlahnya variatif sesuai dengan data budget yang ditambahkan.
+3. Card: Membungkus ListTile dalam bentuk kartu.
+4. Drawer: membuat drawer untuk navigasi page dari aplikasi.
+5. SizedBox: berfungsi untuk memberikan jarak antar widget. 
+6. SingleChildScrollView: berfungsi untuk memberikan fungsionalitas scrollable terhadap child-nya. 
+7. Expanded: berfungsi untuk menampung widget agar memiliki properti expand. 
+8. TextFormField: berfungsi sebagai form yang meminta input teks.
+9. DropdownButton: button yang berfungsi meminta pilihan user dari items yang ada. 
+10. DropdownHideUnderline: menghapus underline dari dropdown button.
+11. TextButton: Agar user dapat mensubmit form dan menyimpan data budget.
+12. Align: berfungsi untuk memberikan alignment untuk suatu widget.
+<br>
+
+### Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+1. onPressed
+2. onSaved
+3. onClick
+4. onTap
+5. onLongPress
+6. onChanged
+7. onHover
+8. dan lain-lain
+<br>
+
+### Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+Navigator sebenarnya berjalan dengan menggunakan prinsip stack untuk menyimpan page-page aplikasi yang dikunjungi. Page yang sedang dikunjungi biasanya berada pada top of stack. Apabila kita ingin mennganti halaman/page, maka page yang akan dikunjungi akan di-push pada top of stack. Di lain sisi, jika kita ingin berpindah ke halaman/page sebelumnya maka akan dilakukan operasi pop pada top of stack sehingga page yang saat ini dikunjungi akan dihapus dari top of stack. Karena penghapusan tersebut, top of stack akan berada pada page yang memuat halaman sebelumnya.
+<br>
+
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Membuat widget drawer yang menavigasikan setiap fitur aplikasi agar saling terhubung.
+- Membuat kode dart `form_budget.dart` yang berfungsi untuk menampilkan form yang nantinya akan meminta input budget dari user. Jangan lupa untuk menyimpan data `Budget` ke dalam list of `Budget`.
+- Membuat kode dart `data_budget.dart` yang berfungsi untuk menampilkan data budget yang telah ditambahkan pada `form_budget.dart`.  
+- Melakukan refactoring widget drawer agar berada pada file terpisah, yakni pada `drawer.dart`, untuk pengerjaan bonus.
+- Menambahkan variabel baru untuk menyimpan date dan menambahkan form terkait untuk meminta input date pada user. Pada tahap ini, penggunaan `showDatePicker` akan sangat membantu.
+- Menambahkan date agar pada `data_budget.dart` agar dapat ditampilkan pada page data budget.     
+- Melakukan command git add, git commit, dan git push ke repository origin.  
+
 <br>
