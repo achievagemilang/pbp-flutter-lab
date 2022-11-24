@@ -1,15 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:counter_7/models/drawer.dart';
-
-class Budget {
-  String judul;
-  int nominal;
-  String tipe;
-  DateTime date;
-
-  Budget(this.judul, this.nominal, this.tipe, this.date);
-}
+import 'package:counter_7/view/widgets/drawer.dart';
+import 'package:counter_7/model/budget.dart';
 
 List<Budget> dataBudget = <Budget>[];
 

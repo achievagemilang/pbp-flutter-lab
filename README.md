@@ -105,3 +105,41 @@ Navigator sebenarnya berjalan dengan menggunakan prinsip stack untuk menyimpan p
 - Melakukan command git add, git commit, dan git push ke repository origin.  
 
 <br>
+<br>
+
+# Tugas 9: Integrasi Web Service pada Flutter
+
+### Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Bisa saja. Kita memang bisa mengambil dan menggunakan JSON tanpa membuat modelnya terlebih dahulu. Akan tetapi, hal ini dapat dibilang tidak efisien karena kita harus memproses respons JSON tersebut secara manual sehingga menyulitkan kita sebagai developer untuk mengakses dan melihat data response dari web service. Maka dari itu, sangat disarankan untuk menggunakan data yang sudah di-parse ke model karena akan menjadi lebih rapi dan terstruktur.
+<br>
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+Penggunaan widget pada tugas kali ini kebanyakan menggunakan widget yang telah disebutkan pada widget-widget untuk penyelesaian tugas 7 dan 8. Agar poin yang disampaikan tidak terlalu sedikit, beberapa istilah widget yang saya gunakan akan meliput widget yang pernah dijelaskan pada tugas sebelumnya. Berikut widget-widget yang dimaksud:  
+
+1. ListView: Sebagai tempat menampung Material yang berisikan widget ListTile untuk yang memuat data budget yang telah ditambahkan.
+2. AsyncSnapshot: berfungsi sebagai representasi permanen dari snapshot interaksi terbaru secara asinkronus.
+3. ListTile: Berfungsi sebagai wadah untuk mengisi ListView. Jumlahnya variatif sesuai dengan data budget yang ditambahkan.
+4. Checkbox: Untuk memunculkan checkbox interaktif pada tampilan aplikasi.
+5. TextButton: Button teks yang berguna untuk implementasi kembali pada detail mywatchlist.
+6. FutureBuilder: Widget yang berguna untuk mengenerate dirinya sendiri pada Future berdasarkan snapshot interaksi terkini.
+7. Column: mengatur children widgets untuk tersusun dalam satu kolom.
+8. Row: mengatur children widgets untuk tersusun dalam satu baris.
+9. Material: sebagai wadah konten yang nantinya akan diberikan elevasi, border, warna, dan dekorasi lainnya. Nantinya akan berisikan listTile sebagai konten dari Material. 
+10. Spacer: untuk membuat tempat kosong yang dapat disesuaikan (flexible) yang nantinya digunakan untuk memberi jarak antar widget yang flexible.
+
+
+### Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+Pertama, dilakukan proses fetch data dari API endpoint. Kemudian, data yang telah di-fetch akan di-decode dalam bentuk JSON. Lalu, data yang telah di-decode menjadi JSON akan di-convert menjadi bentuk model yang telah dipersiapkan sebelumnya. Terakhir, data dalam bentuk model tersebut sudah dapat kita gunakan pada aplikasi Flutter kita.
+<br>
+
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Mengedit widget drawer yang telah dibuat pada file terpisah sebelumnya sehingga dapat menavigasikan fitur mywatchlist pada aplikasi.
+- Membuat kode dart `mywatchlist.dart` pada folder model untuk sebagai model dari mywatchlist yang akan ditampilkan.
+- Membuat implementasi untuk melakukan fetch data dari suatu url pada web service. Jangan lupa refactor menjadi file terpisah `fetch_url.dart` untuk pengerjaan bonus.  
+- Membuat file `mywatchlist.dart` pada folder `view/mywatchlist` untuk menampilkan halaman mywatchlist pada aplikasi. Implementasi pengambilan data menggunakan `fetchwatchist()` yang ada di `fetch_url.dart`. Implementasi checkbox untuk bonus juga dilakukan disini.
+- Membuat file `mywatchlist_detail.dart` untuk menampilkan detail data mywatchlist jika salah satu mywatchlist pada `mywatchlist.dart` ditekan.
+- Melakukan refactoring file-file yang ada di folder lib agar lebih terstruktur.      
+- Melakukan command git add, git commit, dan git push ke repository origin.  
+
+<br>
+<br>

@@ -1,7 +1,8 @@
+import 'package:counter_7/view/budget/data_budget.dart';
+import 'package:counter_7/view/budget/form_budget.dart';
+import 'package:counter_7/view/mywatchlist/mywatchlist.dart';
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/form_budget.dart';
-import 'package:counter_7/data_budget.dart';
 
 class DrawerApp extends StatelessWidget {
   const DrawerApp({super.key});
@@ -40,6 +41,17 @@ class DrawerApp extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const DataBudgetPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('My Watchlist'),
+              onTap: () {
+                // Route menu ke halaman data budget
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MyWatchlistPage()),
                 );
               },
             ),
